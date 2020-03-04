@@ -1,0 +1,40 @@
+{
+    "name": "jobilla/laravel-loco-tms",
+    "description": "A Laravel convenience integration for the Loco translation management system",
+    "type": "library",
+    "require": {
+        "ext-json": "*",
+        "illuminate/console": "^6.0.0",
+        "illuminate/filesystem": "^6.0.0",
+        "illuminate/support": "^6.0.0",
+        "illuminate/translation": "^6.0.0",
+        "loco/loco": "^2.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leo Sjöberg",
+            "email": "leo@jobilla.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jobilla\\Loco\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jobilla\\Loco\\Tests": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jobilla\\Loco\\LocoServiceProvider"
+            ]
+        }
+    }
+}
