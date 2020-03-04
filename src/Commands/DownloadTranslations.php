@@ -24,16 +24,6 @@ class DownloadTranslations extends Command
     protected $description = 'Download current translations in all languages from Loco';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @param ApiClient $client

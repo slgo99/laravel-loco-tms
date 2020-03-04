@@ -24,16 +24,6 @@ class UploadTranslations extends Command
     protected $description = 'Export current English translations to the Loco TMS';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @param ApiClient $client
