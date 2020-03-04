@@ -15,6 +15,6 @@ Either set the environment variable `LOCO_API_KEY`, or publish the configuration
 and update it with another value.
 
 To publish the configuration file, run:
-```php
+```sh
 php artisan vendor:publish --provider="Jobilla\Loco\LocoServiceProvider"
 ```
