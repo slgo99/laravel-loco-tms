@@ -36,7 +36,7 @@ class DownloadTranslations extends Command
             'ext' => 'json',
         ]);
 
-        $translations = json_decode((string)$res, JSON_OBJECT_AS_ARRAY);
+        $translations = $this->dropEmptyString(json_decode((string)$res, JSON_OBJECT_AS_ARRAY));
         $fs = $storage->createLocalDriver(['root' => resource_path('lang')]);
 
         foreach ($translations as $lang => $groups) {
@@ -50,5 +50,19 @@ class DownloadTranslations extends Command
         }
 
         $this->info("✔ All translations downloaded");
+    }
+
+    protected function dropEmptyString(array $array) {
+        $array = array_map(function ($value) {
+            if (is_array($value)) {
+                return $this->dropEmptyString($value);
+            }
+
+            return $value;
+        }, $array);
+
+        return array_filter($array, function($value) {
+            return !is_null($value) && $value !== '';
+        });
     }
 }
