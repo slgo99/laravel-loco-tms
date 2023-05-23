@@ -16,7 +16,7 @@ class LocoServiceProvider extends AggregateServiceProvider
             return ApiClient::factory([
                 'version' => '1.0',
                 'key' => $app['config']->get('loco.api_key'),
-                'validate_response' => true,
+                'validate_response' => false,
             ]);
         });
     }
