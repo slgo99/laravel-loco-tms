@@ -43,7 +43,8 @@ class DownloadTranslations extends Command
             $this->info("Writing translation files for $lang...");
             foreach ($groups as $group => $keys) {
                 $output = var_export($keys, true);
-                $fs->put("$lang/$group.php", "<?php\n\nreturn $output;\n");
+                $fileName = str_replace('-', '_', $lang);
+                $fs->put("$fileName/$group.php", "<?php\n\nreturn $output;\n");
                 $this->info("✔ Successfully saved $group.php");
             }
             $this->info("✔ Downloaded and saved all translations for $lang");
