@@ -33,7 +33,7 @@ class UploadTranslations extends Command
      */
     public function handle(ApiClient $client, Translator $translator, FilesystemManager $storage)
     {
-        $fs = $storage->createLocalDriver(['root' => resource_path('lang')]);
+        $fs = $storage->createLocalDriver(['root' => config('loco.lang_path')]);
         $locales = count($this->option('locale')) ? $this->option('locale') : $fs->directories();
         foreach ($locales as $locale) {
             $translations = [];

@@ -37,7 +37,7 @@ class DownloadTranslations extends Command
         ]);
 
         $translations = $this->dropEmptyString(json_decode((string)$res, JSON_OBJECT_AS_ARRAY));
-        $fs = $storage->createLocalDriver(['root' => resource_path('lang')]);
+        $fs = $storage->createLocalDriver(['root' => config('loco.lang_path')]);
 
         foreach ($translations as $lang => $groups) {
             $this->info("Writing translation files for $lang...");
