@@ -5,7 +5,7 @@ This is an integration with the [Loco Translation Management System](https://loc
 ## Installation
 
 ```sh
-composer require jobilla/laravel-loco-tms
+composer require slgo99/laravel-loco-tms
 ```
 
 ## Configuration
