@@ -1,5 +1,5 @@
 {
-    "name": "jobilla/laravel-loco-tms",
+    "name": "slgo99/laravel-loco-tms",
     "description": "A Laravel convenience integration for the Loco translation management system",
     "type": "library",
     "require": {
@@ -18,7 +18,7 @@
         {
             "name": "Leo Sjöberg",
             "email": "leo@jobilla.com"
-        }
+        },
     ],
     "autoload": {
         "psr-4": {
