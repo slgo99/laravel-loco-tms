@@ -12,6 +12,8 @@ class LocoServiceProvider extends AggregateServiceProvider
 {
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/config/loco.php', 'loco');
+
         $this->app->bind(ApiClient::class, function ($app) {
             return ApiClient::factory([
                 'version' => '1.0',
